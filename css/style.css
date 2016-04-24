@@ -1,0 +1,8 @@
+/* Empty. Add your own CSS if you like */
+.bar.bar-positive{
+    background: #454A94;
+    border-color: #434889;
+}
+.positive, a.positive{ color: #454A94}
+.dark-bg{ background: #FFF;}
+.bar.bar-light{ background: #FFF;}

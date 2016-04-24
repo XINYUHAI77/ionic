@@ -1,0 +1,40 @@
+<!--
+  This template loads for the 'dcart' state (app.js)
+-->
+<ion-view view-title="我的购物车">
+    <ion-content class="cart">
+        <div class="list">
+
+            <div class="item item-thumbnail-left" ng-repeat="lst in carlst">
+                <img ng-src="{{lst.images[0]}}" alt=""/>
+                <h2 class="positive">{{lst.name}}</h2>
+                <div>
+                    <div class="col">
+                        <a href="#" class="trash" ng-click="showConfirm($index)">
+                            <i class="ion-trash-a"></i>
+                        </a>
+                        <div class="pull-right">
+                            ￥{{lst.price}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Calculate price -->
+
+            <div class="item stable-bg">
+                <b>合计</b>
+                <div class="pull-right">{{totalCart() |  currency : '￥'}}</div>
+            </div>
+        </div>
+
+        <!-- Checkout button -->
+        <div class="padding">
+            <button class="button button-block button-energized" >
+                立即付款
+            </button>
+        </div>
+
+    </ion-content>
+</ion-view>
